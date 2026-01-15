@@ -1,0 +1,338 @@
+{
+  "BTC": {
+    "coin": "Bitcoin",
+    "symbol": "BTC",
+    "launch_year": 2009,
+    "consensus": "Proof of Work",
+    "last_price": 96750.0,
+    "price_timestamp": "2026-01-15T13:47:05Z"
+  },
+  "ETH": {
+    "coin": "Ethereum",
+    "symbol": "ETH",
+    "launch_year": 2015,
+    "consensus": "Proof of Stake",
+    "last_price": 2250.0,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "SOL": {
+    "coin": "Solana",
+    "symbol": "SOL",
+    "launch_year": 2020,
+    "consensus": "Proof of History / Proof of Stake",
+    "last_price": 144.75,
+    "price_timestamp": "2026-01-15T13:46:50Z"
+  },
+  "BNB": {
+    "coin": "Binance Coin",
+    "symbol": "BNB",
+    "launch_year": 2017,
+    "consensus": "Proof of Staked Authority",
+    "last_price": 310.0,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "XRP": {
+    "coin": "XRP",
+    "symbol": "XRP",
+    "launch_year": 2012,
+    "consensus": "RPCA (Ripple Protocol Consensus Algorithm)",
+    "last_price": 0.58,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "ADA": {
+    "coin": "Cardano",
+    "symbol": "ADA",
+    "launch_year": 2017,
+    "consensus": "Proof of Stake",
+    "last_price": 0.55,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "AVAX": {
+    "coin": "Avalanche",
+    "symbol": "AVAX",
+    "launch_year": 2020,
+    "consensus": "Proof of Stake",
+    "last_price": 35.0,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "DOGE": {
+    "coin": "Dogecoin",
+    "symbol": "DOGE",
+    "launch_year": 2013,
+    "consensus": "Proof of Work",
+    "last_price": 0.08,
+    "price_timestamp": "2026-01-15T13:39:24Z"
+  },
+  "DOT": {
+    "coin": "Polkadot",
+    "symbol": "DOT",
+    "launch_year": 2020,
+    "consensus": "NPoS (Nominated Proof of Stake)",
+    "last_price": 7.5,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "TRX": {
+    "coin": "TRON",
+    "symbol": "TRX",
+    "launch_year": 2017,
+    "consensus": "DPoS (Delegated Proof of Stake)",
+    "last_price": 0.1,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "LINK": {
+    "coin": "Chainlink",
+    "symbol": "LINK",
+    "launch_year": 2017,
+    "consensus": "Proof of Stake (Oracle Network)",
+    "last_price": 14.5,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "MATIC": {
+    "coin": "Polygon",
+    "symbol": "MATIC",
+    "launch_year": 2017,
+    "consensus": "Proof of Stake",
+    "last_price": 0.85,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "TON": {
+    "coin": "Toncoin",
+    "symbol": "TON",
+    "launch_year": 2018,
+    "consensus": "Proof of Stake",
+    "last_price": 2.2,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "SHIB": {
+    "coin": "Shiba Inu",
+    "symbol": "SHIB",
+    "launch_year": 2020,
+    "consensus": "Proof of Stake (ERC-20)",
+    "last_price": 9.5e-06,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "LTC": {
+    "coin": "Litecoin",
+    "symbol": "LTC",
+    "launch_year": 2011,
+    "consensus": "Proof of Work",
+    "last_price": 65.0,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "BCH": {
+    "coin": "Bitcoin Cash",
+    "symbol": "BCH",
+    "launch_year": 2017,
+    "consensus": "Proof of Work",
+    "last_price": 230.0,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "ATOM": {
+    "coin": "Cosmos",
+    "symbol": "ATOM",
+    "launch_year": 2019,
+    "consensus": "Tendermint BFT",
+    "last_price": 10.0,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "UNI": {
+    "coin": "Uniswap",
+    "symbol": "UNI",
+    "launch_year": 2020,
+    "consensus": "Governance Token",
+    "last_price": 6.8,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "XLM": {
+    "coin": "Stellar",
+    "symbol": "XLM",
+    "launch_year": 2014,
+    "consensus": "Stellar Consensus Protocol",
+    "last_price": 0.12,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "OKB": {
+    "coin": "OKB",
+    "symbol": "OKB",
+    "launch_year": 2018,
+    "consensus": "Proof of Stake",
+    "last_price": 55.0,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "LEO": {
+    "coin": "UNUS SED LEO",
+    "symbol": "LEO",
+    "launch_year": 2019,
+    "consensus": "Exchange Token",
+    "last_price": 4.0,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "ETC": {
+    "coin": "Ethereum Classic",
+    "symbol": "ETC",
+    "launch_year": 2016,
+    "consensus": "Proof of Work",
+    "last_price": 20.0,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "FIL": {
+    "coin": "Filecoin",
+    "symbol": "FIL",
+    "launch_year": 2020,
+    "consensus": "Proof of Spacetime",
+    "last_price": 5.5,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "HBAR": {
+    "coin": "Hedera",
+    "symbol": "HBAR",
+    "launch_year": 2019,
+    "consensus": "Hashgraph Consensus",
+    "last_price": 0.08,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "ICP": {
+    "coin": "Internet Computer",
+    "symbol": "ICP",
+    "launch_year": 2021,
+    "consensus": "Threshold Relay",
+    "last_price": 12.0,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "KAS": {
+    "coin": "Kaspa",
+    "symbol": "KAS",
+    "launch_year": 2021,
+    "consensus": "BlockDAG (Proof of Work)",
+    "last_price": 0.12,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "VET": {
+    "coin": "VeChain",
+    "symbol": "VET",
+    "launch_year": 2015,
+    "consensus": "Proof of Authority",
+    "last_price": 0.03,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "NEAR": {
+    "coin": "NEAR Protocol",
+    "symbol": "NEAR",
+    "launch_year": 2020,
+    "consensus": "Thresholded Proof of Stake",
+    "last_price": 3.2,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "APT": {
+    "coin": "Aptos",
+    "symbol": "APT",
+    "launch_year": 2022,
+    "consensus": "AptosBFT (Proof of Stake)",
+    "last_price": 9.0,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "OP": {
+    "coin": "Optimism",
+    "symbol": "OP",
+    "launch_year": 2022,
+    "consensus": "Optimistic Rollup",
+    "last_price": 3.4,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "ARB": {
+    "coin": "Arbitrum",
+    "symbol": "ARB",
+    "launch_year": 2023,
+    "consensus": "Optimistic Rollup",
+    "last_price": 1.8,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "INJ": {
+    "coin": "Injective",
+    "symbol": "INJ",
+    "launch_year": 2020,
+    "consensus": "Proof of Stake",
+    "last_price": 35.5,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "RNDR": {
+    "coin": "Render",
+    "symbol": "RNDR",
+    "launch_year": 2017,
+    "consensus": "Proof of Render (ERC-20)",
+    "last_price": 4.5,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "STX": {
+    "coin": "Stacks",
+    "symbol": "STX",
+    "launch_year": 2020,
+    "consensus": "Proof of Transfer",
+    "last_price": 1.9,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "IMX": {
+    "coin": "Immutable",
+    "symbol": "IMX",
+    "launch_year": 2021,
+    "consensus": "ZK-Rollup",
+    "last_price": 2.1,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "GRT": {
+    "coin": "The Graph",
+    "symbol": "GRT",
+    "launch_year": 2020,
+    "consensus": "Proof of Stake",
+    "last_price": 0.17,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "XMR": {
+    "coin": "Monero",
+    "symbol": "XMR",
+    "launch_year": 2014,
+    "consensus": "Proof of Work (RandomX)",
+    "last_price": 160.0,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "EGLD": {
+    "coin": "MultiversX",
+    "symbol": "EGLD",
+    "launch_year": 2020,
+    "consensus": "Secure Proof of Stake",
+    "last_price": 55.0,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "SAND": {
+    "coin": "The Sandbox",
+    "symbol": "SAND",
+    "launch_year": 2020,
+    "consensus": "Proof of Stake",
+    "last_price": 0.5,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "THETA": {
+    "coin": "Theta Network",
+    "symbol": "THETA",
+    "launch_year": 2018,
+    "consensus": "Multi-BFT",
+    "last_price": 1.1,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "FTM": {
+    "coin": "Fantom",
+    "symbol": "FTM",
+    "launch_year": 2019,
+    "consensus": "Lachesis consensus",
+    "last_price": 0.4,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  },
+  "ALGO": {
+    "coin": "Algorand",
+    "symbol": "ALGO",
+    "launch_year": 2019,
+    "consensus": "Pure Proof of Stake",
+    "last_price": 0.18,
+    "price_timestamp": "2026-01-06T10:15:00Z"
+  }
+}
