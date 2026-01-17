@@ -3,7 +3,10 @@ import os
 from typing import Optional, Dict, Any
 
 class KnowledgeBase:
-    def __init__(self, kb_path: str = "crypto_kb.json"):
+    def __init__(self, kb_path: str = None):
+        if kb_path is None:
+            # Resolve relative to this script's directory
+            kb_path = os.path.join(os.path.dirname(__file__), "crypto_kb.json")
         self.kb_path = kb_path
         self.data: Dict[str, Any] = self._load_kb()
 
@@ -33,7 +36,9 @@ class KnowledgeBase:
                 "symbol": symbol,
                 "coin": symbol, # Default to symbol if name unknown
                 "launch_year": None,
-                "consensus": None
+                "consensus": None,
+                "founders": [],
+                "description": ""
             }
         
         self.data[symbol]["last_price"] = price

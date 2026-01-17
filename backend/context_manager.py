@@ -2,12 +2,23 @@ from typing import List, Dict, Optional
 import re
 
 class ContextManager:
-    def __init__(self, history_limit: int = 10):
+    def __init__(self, history_limit: int = 10, name_map: Optional[Dict[str, str]] = None):
         self.history: List[Dict[str, str]] = []
         self.history_limit = history_limit
         self.last_mentioned_symbol: Optional[str] = None
         # Common crypto symbols for simple detection
-        self.known_symbols = {"BTC", "ETH", "SOL", "ADA", "XRP", "DOGE", "DOT", "USDT", "USDC"}
+        self.known_symbols = {"BTC", "ETH", "SOL", "ADA", "XRP", "DOGE", "DOT", "USDT", "USDC", "LINK", "MATIC", "BNB"}
+        self.name_map = name_map or {
+            "BITCOIN": "BTC",
+            "ETHEREUM": "ETH",
+            "SOLANA": "SOL",
+            "CARDANO": "ADA",
+            "RIPPLE": "XRP",
+            "DOGECOIN": "DOGE",
+            "CHAINLINK": "LINK",
+            "POLYGON": "MATIC",
+            "BINANCE": "BNB"
+        }
 
     def add_turn(self, role: str, content: str):
         self.history.append({"role": role, "content": content})
@@ -31,16 +42,7 @@ class ContextManager:
                 return clean_word
         
         # Name mapping
-        name_map = {
-            "BITCOIN": "BTC",
-            "ETHEREUM": "ETH",
-            "SOLANA": "SOL",
-            "CARDANO": "ADA",
-            "RIPPLE": "XRP",
-            "DOGECOIN": "DOGE"
-        }
-        
-        for name, symbol in name_map.items():
+        for name, symbol in self.name_map.items():
             if name in text_upper:
                 return symbol
         

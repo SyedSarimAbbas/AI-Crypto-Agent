@@ -4,30 +4,56 @@
     "symbol": "BTC",
     "launch_year": 2009,
     "consensus": "Proof of Work",
-    "last_price": 96750.0,
-    "price_timestamp": "2026-01-15T13:47:05Z"
+    "founders": [
+      "Satoshi Nakamoto"
+    ],
+    "description": "Bitcoin is a decentralized digital currency, without a central bank or single administrator, that can be sent from user to user on the peer-to-peer bitcoin network without the need for intermediaries.",
+    "last_price": 95338.0,
+    "price_timestamp": "2026-01-17T19:17:21Z",
+    "image_query": "bitcoin cryptocurrency gold coin",
+    "icon_url": "https://assets.coingecko.com/coins/images/1/large/bitcoin.png"
   },
   "ETH": {
     "coin": "Ethereum",
     "symbol": "ETH",
     "launch_year": 2015,
     "consensus": "Proof of Stake",
-    "last_price": 2250.0,
-    "price_timestamp": "2026-01-06T10:15:00Z"
+    "founders": [
+      "Vitalik Buterin",
+      "Gavin Wood",
+      "Charles Hoskinson",
+      "Anthony Di Iorio",
+      "Joseph Lubin"
+    ],
+    "description": "Ethereum is a decentralized, open-source blockchain with smart contract functionality. Ether is the native cryptocurrency of the platform. Among cryptocurrencies, ether is second only to bitcoin in market capitalization.",
+    "last_price": 3315.65,
+    "price_timestamp": "2026-01-17T19:15:32Z",
+    "image_query": "ethereum blockchain crystal",
+    "icon_url": "https://assets.coingecko.com/coins/images/279/large/ethereum.png"
   },
   "SOL": {
     "coin": "Solana",
     "symbol": "SOL",
     "launch_year": 2020,
     "consensus": "Proof of History / Proof of Stake",
+    "founders": [
+      "Anatoly Yakovenko"
+    ],
+    "description": "Solana is a public blockchain platform with smart contract functionality. Its native cryptocurrency is SOL. Solana achieves high transaction throughput using a unique Proof of History consensus mechanism combined with Proof of Stake.",
     "last_price": 144.75,
-    "price_timestamp": "2026-01-15T13:46:50Z"
+    "price_timestamp": "2026-01-15T13:46:50Z",
+    "image_query": "solana technology blue gradient",
+    "icon_url": "https://assets.coingecko.com/coins/images/4128/large/solana.png"
   },
   "BNB": {
     "coin": "Binance Coin",
     "symbol": "BNB",
     "launch_year": 2017,
     "consensus": "Proof of Staked Authority",
+    "founders": [
+      "Changpeng Zhao"
+    ],
+    "description": "BNB is the native cryptocurrency of the Binance ecosystem, including the Binance Chain and Binance Smart Chain. It was originally launched on the Ethereum blockchain but later migrated to its own purpose-built blockchain.",
     "last_price": 310.0,
     "price_timestamp": "2026-01-06T10:15:00Z"
   },
@@ -36,22 +62,42 @@
     "symbol": "XRP",
     "launch_year": 2012,
     "consensus": "RPCA (Ripple Protocol Consensus Algorithm)",
+    "founders": [
+      "Chris Larsen",
+      "Jed McCaleb",
+      "Arthur Britto"
+    ],
+    "description": "XRP is a digital asset built for payments. It is the native asset on the XRP Ledger\u00e2\u20ac\u201dan open-source, permissionless and decentralized blockchain technology that can settle transactions in 3-5 seconds.",
     "last_price": 0.58,
-    "price_timestamp": "2026-01-06T10:15:00Z"
+    "price_timestamp": "2026-01-06T10:15:00Z",
+    "image_query": "ripple xrp blue financial",
+    "icon_url": "https://assets.coingecko.com/coins/images/1/large/bitcoin.png"
   },
   "ADA": {
     "coin": "Cardano",
     "symbol": "ADA",
     "launch_year": 2017,
     "consensus": "Proof of Stake",
+    "founders": [
+      "Charles Hoskinson"
+    ],
+    "description": "Cardano is a proof-of-stake blockchain platform that says its goal is to allow \"changemakers, innovators and visionaries\" to bring about positive global change.",
     "last_price": 0.55,
-    "price_timestamp": "2026-01-06T10:15:00Z"
+    "price_timestamp": "2026-01-06T10:15:00Z",
+    "image_query": "cardano blockchain blue",
+    "icon_url": "https://assets.coingecko.com/coins/images/975/large/cardano.png"
   },
   "AVAX": {
     "coin": "Avalanche",
     "symbol": "AVAX",
     "launch_year": 2020,
     "consensus": "Proof of Stake",
+    "founders": [
+      "Emin G\u00c3\u00bcn Sirer",
+      "Kevin Sekniqi",
+      "Maofan \"Ted\" Yin"
+    ],
+    "description": "Avalanche is a platform for building custom blockchain networks and decentralized applications (dApps). Its native token is AVAX. It is designed to be highly scalable and interoperable.",
     "last_price": 35.0,
     "price_timestamp": "2026-01-06T10:15:00Z"
   },
@@ -60,14 +106,27 @@
     "symbol": "DOGE",
     "launch_year": 2013,
     "consensus": "Proof of Work",
-    "last_price": 0.08,
-    "price_timestamp": "2026-01-15T13:39:24Z"
+    "founders": [
+      "Billy Markus",
+      "Jackson Palmer"
+    ],
+    "description": "Dogecoin is a cryptocurrency created by software engineers Billy Markus and Jackson Palmer, who decided to create a payment system as a \"joke\", making fun of the wild speculation in cryptocurrencies at the time.",
+    "last_price": 0.138733,
+    "price_timestamp": "2026-01-17T19:15:50Z",
+    "image_query": "dogecoin dog shiba inu",
+    "icon_url": "https://assets.coingecko.com/coins/images/5/large/dogecoin.png"
   },
   "DOT": {
     "coin": "Polkadot",
     "symbol": "DOT",
     "launch_year": 2020,
     "consensus": "NPoS (Nominated Proof of Stake)",
+    "founders": [
+      "Gavin Wood",
+      "Robert Habermeier",
+      "Peter Czaban"
+    ],
+    "description": "Polkadot is a sharded multichain network that connects and secures a network of specialized blockchains, facilitating cross-chain transfer of any data or asset types, not just tokens.",
     "last_price": 7.5,
     "price_timestamp": "2026-01-06T10:15:00Z"
   },
@@ -76,6 +135,10 @@
     "symbol": "TRX",
     "launch_year": 2017,
     "consensus": "DPoS (Delegated Proof of Stake)",
+    "founders": [
+      "Justin Sun"
+    ],
+    "description": "TRON is a blockchain-based decentralized operating system with a smart contract functionality and proof-of-stake principles implementation. Its native cryptocurrency is TRX.",
     "last_price": 0.1,
     "price_timestamp": "2026-01-06T10:15:00Z"
   },
@@ -84,8 +147,9 @@
     "symbol": "LINK",
     "launch_year": 2017,
     "consensus": "Proof of Stake (Oracle Network)",
-    "last_price": 14.5,
-    "price_timestamp": "2026-01-06T10:15:00Z"
+    "last_price": 13.79,
+    "price_timestamp": "2026-01-17T18:18:23Z",
+    "description": "Chainlink is the industry-standard decentralized oracle network that solves the \"oracle problem\" by connecting smart contracts with real-world data. Blockchains cannot access external information on their own, so Chainlink acts as a secure bridge, enabling smart contracts to react to real-world events using verified, tamper-proof data. It is widely considered one of the first decentralized oracle networks and is the market leader in bringing off-chain data on-chain.\r"
   },
   "MATIC": {
     "coin": "Polygon",
@@ -108,8 +172,9 @@
     "symbol": "SHIB",
     "launch_year": 2020,
     "consensus": "Proof of Stake (ERC-20)",
-    "last_price": 9.5e-06,
-    "price_timestamp": "2026-01-06T10:15:00Z"
+    "last_price": 8.52e-06,
+    "price_timestamp": "2026-01-17T18:19:07Z",
+    "description": "Shiba Inu (SHIB) is a meme token which began as a fun currency and has now transformed into a decentralized ecosystem. During the initial\u00a0launch, 50% of the supply was allocated into Vitalik Buterin's ethereum wallet. \r"
   },
   "LTC": {
     "coin": "Litecoin",

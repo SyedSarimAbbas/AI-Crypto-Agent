@@ -1,91 +1,61 @@
-# 🪙 AI Crypto Agent: The Knowledge-First Cryptocurrency Assistant
+# 🪙 AI Crypto Agent: The Knowledge-First 3D Experience
 
 ## 📖 Project Overview
 
-The **AI Crypto Agent** is a specialized, high-integrity conversational assistant designed to provide accurate, factual information about cryptocurrencies. In an era where Generative AI can often hallucinate or confidently state incorrect facts, this project serves as a crucial experiment in **Retrieval-Augmented Generation (RAG)** principles, specifically tailored for the high-stakes domain of finance.
+The **AI Crypto Agent** is a specialized, high-integrity conversational assistant designed to provide accurate, factual information about cryptocurrencies. It is an immersive experiment in **Retrieval-Augmented Generation (RAG)** principles, featuring a stunning 3D user interface.
 
-Unlike generic Large Language Models (LLMs) that may offer unsolicited financial advice or speculative predictions, the AI Crypto Agent is built upon a strict **"Knowledge-First" architecture**. It is engineered to prioritize verified local data and real-time market metrics over generative speculation. The core philosophy of this project is **Safety and Accuracy**. In the volatile world of cryptocurrency, misinformation can be costly. This agent acts as a guardrail, answering questions about coin origins, mechanics, and current prices while explicitly rejecting requests for price predictions, investment strategies, or "hot tips."
+Built upon a strict **"Knowledge-First" architecture**, the agent prioritizes verified local data and real-time market metrics over generative speculation. Its core mission is to bridge the gap between institutional accuracy and an engaging, modern user experience.
 
 ## 🏗️ System Architecture
 
-The application is built as a hybrid system that intelligently sources data from two distinct layers, ensuring robustness and reliability:
+The application is built on a high-performance hybrid infrastructure:
 
-1.  **Local Knowledge Base (The Source of Truth):**
-    The agent first consults a curated JSON-based Knowledge Base (`crypto_kb.json`). This ensures that static metadata—such as a coin's founder, launch year, consensus mechanism, and utility—is always consistent and factually correct. This layer protects against the "hallucinations" common in pure AI models, ensuring that Bitcoin is always identified as created by Satoshi Nakamoto and not by a random entity.
-
-2.  **Live API Integration (The Real-Time Layer):**
-    For dynamic data like current price (`USD`), the agent bridges the gap between static knowledge and the live market. It utilizes the **CoinGecko API** to fetch real-time market data. The system includes a smart fallback mechanism: if the API is unreachable or rate-limited, it gracefully degrades to simulated mock data or cached values, ensuring the application never crashes during a demo or outage.
+1.  **FastAPI Backend:** A robust Python API that coordinates entity resolution, intent detection, and real-time data fetching.
+2.  **3D Frontend Experience:** A sophisticated web interface built with **Three.js**, **GSAP**, and Vanilla Javascript. It features an interactive 3D particle environment, glassmorphism design, and smooth transitions.
+3.  **Local Knowledge Base:** A curated repository of crypto metadata ensuring hallucination-free responses for historical and foundational facts.
+4.  **Real-Time API Layer:** Seamless integration with **CoinGecko** for live price tracking and market updates.
 
 ## ✨ Key Features
 
 ### 🛡️ Strict Hallucination Guards
-The agent is programmed with a rigid policy layer using intent detection algorithms. If a user asks speculative questions like *"Will Solana go up next week?"* or *"Should I buy Bitcoin?"*, the agent detects the **"Speculative"** or **"Financial Advice"** intent. It then firmly refuses to answer, reminding the user of its factual, non-advisory mandate. This feature is critical for compliance and user safety.
+The agent uses intent detection to strictly stick to facts. It is programmed to refuse financial advice or speculative predictions, maintaining the highest standards of informational integrity.
+
+### 🌐 Immersive 3D Dashboard
+- **Three.js Environment:** Interactive 3D space with floating particle systems.
+- **Dynamic AI "Thinking":** Realistic status indicators ("Analyzing...", "Generating...") with smooth typewriter effects.
+- **Glassmorphism UI:** Modern, translucent panels that provide a "premium feel."
+- **Integrated Visuals:** Responses include coin icons and subtle background watermarks for instant visual recognition.
 
 ### ⚡ Real-Time Market Data
-Users can ask for the price of major assets (BTC, ETH, SOL, ADA, XRP, etc.), and the agent will retrieve the latest live price via the CoinGecko `simple/price` endpoint. This data is timestamped to the second, ensuring users know exactly how fresh the information is.
+Ask for the price of BTC, ETH, SOL, and more to get live, timestamped data directly in your chat bubble.
 
-### 🎨 Premium User Experience
-The frontend is built with **Streamlit**, but it is heavily customized to break away from the standard "data science script" look.
-- **Dynamic Background:** A subtle, high-quality video background sets a futuristic, tech-forward tone.
-- **Glassmorphism UI:** Chat bubbles and sidebars feature a translucent, frosted-glass effect using `backdrop-filter: blur`, creating a sense of depth and modernity.
-- **Smooth Animations:** CSS transitions and hover effects make the interface feel alive and responsive.
-- **Responsive Design:** The layout automatically adjusts for different screen sizes, ensuring a seamless experience on both desktop and mobile.
+## 🛠️ Technical Stack
 
-## 🛠️ Technical Stack & Dependencies
+- **Backend:** Python 3.8+, FastAPI, Uvicorn
+- **Frontend:** Vanilla JS, HTML5/CSS3, Three.js, GSAP
+- **API:** CoinGecko V3
+- **Data:** Local JSON Registry
 
-This project leverages a robust and modern technology stack:
-
-- **Language:** Python 3.8+
-- **Frontend Framework:** Streamlit (v1.30+)
-- **API Client:** `requests` library interacting with CoinGecko V3 API
-- **Data Storage:** Local JSON (lightweight, fast, no SQL database required)
-- **Styling:** Custom CSS injection for advanced UI customisation
-- **Concurrency:** Basic session state management for chat history persistence
-
-**Key Dependencies:**
-- `streamlit`: The core framework for the web interface.
-- `requests`: Handling HTTP requests to external APIs.
-
-## 🚀 Installation & Usage Guide
-
-Follow these simple steps to set up the project locally on your machine.
+## 🚀 Installation & Usage
 
 ### 1. Clone the Repository
-Bring the code to your local machine using git:
 ```bash
 git clone https://github.com/SyedSarimAbbas/AI-Crypto-Agent.git
 cd AI-Crypto-Agent
 ```
 
-### 2. Set Up the Environment
-It is recommended to use a virtual environment to keep your system clean. Install the necessary dependencies:
+### 2. Install Dependencies
 ```bash
-pip install streamlit requests
+pip install fastapi uvicorn requests
 ```
 
-### 3. Run the Application
-You can verify the installation by running the agent. We have provided a convenience script for Windows users:
-
-**Option A: Using the Batch Script (Windows)**
-Simply double-click `run.bat` or execute it in the terminal:
+### 3. Launch the Experience
+Simply run the provided batch script on Windows:
 ```bash
 .\run.bat
 ```
-
-**Option B: Using the Command Line**
-```bash
-streamlit run app.py
-```
-
-Once running, the application will open in your default web browser at `http://localhost:8501`.
+The application will automatically launch your browser and connect to the 3D dashboard.
 
 ## 📄 License
-
 This project is licensed under the **MIT License**.
-
-Current Year: 2026
-Copyright (c) Syed Sarim Abbas
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files, to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+Copyright (c) 2026 Syed Sarim Abbas

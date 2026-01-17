@@ -2,6 +2,7 @@ import os
 import requests
 import random
 import time
+import re
 from typing import Optional, Dict, Any
 
 class FreeCryptoApiClient:
@@ -119,3 +120,49 @@ class FreeCryptoApiClient:
             "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
             "source": "MockAPI (Estimate)"
         }
+
+    def get_coin_metadata(self, symbol: str) -> Optional[Dict[str, Any]]:
+        """
+        Fetches metadata (description) for a coin using CoinGecko API.
+        """
+        coin_id = self._get_coin_id(symbol)
+        if not coin_id:
+            return None
+
+        try:
+            url = f"{self.COINGECKO_URL}/coins/{coin_id}"
+            params = {
+                "localization": "false",
+                "tickers": "false",
+                "market_data": "false",
+                "community_data": "false",
+                "developer_data": "false",
+                "sparkline": "false"
+            }
+            response = requests.get(url, params=params, timeout=10)
+            response.raise_for_status()
+            data = response.json()
+
+            description = data.get("description", {}).get("en", "")
+            clean_desc = self._clean_html(description)
+            
+            # Get first paragraph or first 500 chars
+            if "\n" in clean_desc:
+                clean_desc = clean_desc.split("\n")[0]
+            
+            if len(clean_desc) > 500:
+                clean_desc = clean_desc[:497] + "..."
+
+            return {
+                "description": clean_desc,
+                "founders": [] # CoinGecko doesn't easily provide a structured founder list in simple calls
+            }
+        except Exception as e:
+            print(f"[API Error] Failed to fetch metadata for {symbol}: {e}")
+            return None
+
+    def _clean_html(self, raw_html: str) -> str:
+        """Removes HTML tags from a string."""
+        cleanr = re.compile('<.*?>')
+        cleantext = re.sub(cleanr, '', raw_html)
+        return cleantext

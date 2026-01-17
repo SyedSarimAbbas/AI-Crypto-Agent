@@ -8,7 +8,15 @@ class CryptoAgent:
     def __init__(self):
         self.kb = KnowledgeBase()
         self.api = FreeCryptoApiClient()
-        self.context = ContextManager()
+        
+        # Populate name map for context manager
+        name_map = {}
+        for symbol, data in self.kb.data.items():
+            if "coin" in data:
+                name_map[data["coin"].upper()] = symbol
+        
+        self.context = ContextManager(name_map=name_map)
+        self.context.last_symbol = None
         
     def process_query(self, user_input: str) -> str:
         """
@@ -22,6 +30,8 @@ class CryptoAgent:
         
         # 1. Entity Resolution
         symbol = self.context.resolve_entity(user_input)
+        if symbol:
+            self.context.last_symbol = symbol
         
         # 2. Intent Detection (Keyword based)
         intent = self._detect_intent(user_input)
@@ -69,17 +79,42 @@ class CryptoAgent:
 
         elif intent == "metadata":
              if not kb_data:
-                  # Try API metadata (simulated by price call which might return basics, or fail)
-                  # If we only have price API, we can't get metadata.
-                  # But the requirement says "Coin metadata (via Knowledge Base)".
-                  # If not in KB, we fail unless API gives it.
-                  # My API client only gives Price.
-                  # So we fail if not in KB.
-                  return "INSUFFICIENT DATA – Metadata not found in Knowledge Base."
+                  # Try API metadata
+                  api_metadata = self.api.get_coin_metadata(symbol)
+                  if api_metadata:
+                      self.kb.add_fresh_coin_data(symbol, api_metadata)
+                      kb_data = self.kb.get_coin_data(symbol)
+                      source = "FreeCryptoAPI (Metadata)"
+                  else:
+                      return "INSUFFICIENT DATA – Metadata not found in Knowledge Base."
              
              consensus = kb_data.get("consensus", "Unknown")
              launch = kb_data.get("launch_year", "Unknown")
-             response_text = f"{symbol} ({kb_data.get('coin')}) was launched in {launch} and uses {consensus} consensus."
+             founders = kb_data.get("founders", [])
+             description = kb_data.get("description", "")
+             
+             # If description or founders missing, try API metadata fallback
+             if (not description or not founders) and symbol:
+                 api_metadata = self.api.get_coin_metadata(symbol)
+                 if api_metadata:
+                     if not description:
+                         description = api_metadata.get("description", "")
+                         # Persist if we got it
+                         self.kb.add_fresh_coin_data(symbol, {"description": description})
+                     if not founders and api_metadata.get("founders"):
+                         founders = api_metadata.get("founders", [])
+                         self.kb.add_fresh_coin_data(symbol, {"founders": founders})
+                     source = "FreeCryptoAPI (Metadata)"
+
+             founder_str = ", ".join(founders) if founders else "Unknown"
+             response_text = f"**{symbol} ({kb_data.get('coin')})**\n\n"
+             response_text += f"**Launch Year:** {launch}\n"
+             response_text += f"**Consensus:** {consensus}\n"
+             response_text += f"**Founders:** {founder_str}\n\n"
+             if description:
+                 response_text += f"{description}"
+             else:
+                 response_text += "No detailed description available."
         
         # 4. Final strict check
         if not response_text:
@@ -106,3 +141,24 @@ class CryptoAgent:
         
         # Default to metadata if entity found
         return "metadata"
+    def get_image_metadata(self, query: str) -> Dict[str, str]:
+        """
+        Returns image search query and icon URL for the given coin.
+        """
+        symbol = self.context.resolve_entity(query)
+        coin_data = self.kb.get_coin_data(symbol) if symbol else None
+        
+        if coin_data:
+            return {
+                "image_query": coin_data.get("image_query", f"{coin_data.get('coin')} cryptocurrency"),
+                "icon_url": coin_data.get("icon_url", ""),
+                "coin_name": coin_data.get("coin", "Unknown")
+            }
+            
+        # Fallback to general history video from KB DEFAULT
+        default_data = self.kb.get_coin_data("DEFAULT")
+        return {
+            "image_query": default_data.get("image_query", "cryptocurrency blockchain"),
+            "icon_url": default_data.get("icon_url", ""),
+            "coin_name": "Cryptocurrency"
+        }
